@@ -1,0 +1,161 @@
+////////////////////////////////////////////////////////////////////////
+//                         SWITCH NAVBAR                              //
+////////////////////////////////////////////////////////////////////////
+.onoffswitch {
+  position: relative; width: 120px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  margin-top: 1vh;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+  font-size: 10px; color: white; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "Site Immersif";
+  padding-left: 9px;
+  background-color: #FFFFFF; color: #000000;
+}
+.onoffswitch-inner:after {
+  content: "Site Immersif";
+  padding-right: 9px;
+  background-color: #FFFFFF; color: #000000;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block; width: 31px; margin: 0.5px;
+  background: #FF0097;
+  position: absolute; top: 0; bottom: 0;
+  right: 86px;
+  border: 2px solid #999999; border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+////////////////////////////////////////////////////////////////////////
+//                        SWITCH FOOTER                               //
+////////////////////////////////////////////////////////////////////////
+.onoffswitch2 {
+  position: relative; width: 57px;
+  margin-top: 2vh;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox2 {
+  display: none;
+}
+.onoffswitch-label2 {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #FF0097; border-radius: 20px;
+}
+.onoffswitch-inner2 {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner2:before, .onoffswitch-inner2:after {
+  display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner2:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #FFFFFF; color: #FFFFFF;
+}
+.onoffswitch-inner2:after {
+  content: "";
+  padding-right: 10px;
+  background-color: #FFFFFF; color: #FFFFFF;
+  text-align: right;
+}
+.onoffswitch-switch2 {
+  display: block; width: 20px; margin: 0px;
+  background: #FF0097;
+  position: absolute; top: 0; bottom: 0;
+  right: 33px;
+  border: 2px solid #FF0097; border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox2:checked + .onoffswitch-label2 .onoffswitch-inner2 {
+  margin-left: 0;
+}
+.onoffswitch-checkbox2:checked + .onoffswitch-label2 .onoffswitch-switch2 {
+  right: 0px;
+}
+
+////////////////////////////////////////////////////////////////////////
+//                               FORM                                 //
+////////////////////////////////////////////////////////////////////////
+
+.form{
+  position: relative;
+  .form-input{
+    position: absolute;
+    &:focus + .form-label{
+      color: black;
+      transform: translateY(-100%) scale(0.7);
+      opacity: 1;
+    }
+  }
+  .form-label + .form-input{
+    transform-origin: left center;
+    transition: all 400ms;
+  }
+  .form-label{
+    text-align: left;
+    position: absolute;
+    opacity: 0.7;
+  }
+  .form-field{
+    padding: 2vh 5vw 3vh 0;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+//                               BOUTON                               //
+////////////////////////////////////////////////////////////////////////
+
+.send:hover{
+  background: #1ba1e2;
+  color: white !important;
+}
+
+.start{
+  &:before {
+    content: "Bonne Chance";
+    text-align: center;
+    padding: 4vh;
+    color: black;
+    position: absolute;
+    background: #ff0097;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    transition: top 400ms ease-in-out 400ms;
+    z-index: 10;
+  }
+
+  &:hover {
+    &:before {
+      top: 0;
+    }
+  }
+}

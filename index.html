@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Site Immersif</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Animation -->
+  <link rel="stylesheet" href="css/animation.css">
+  <!-- SCRIPT NAVBAR TO STICKY -->
+  <script>
+  $(document).ready(function () {
+    $('#nav').affix({
+      set: {
+        top: $('header').height()
+      }
+    });
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 0) {
+        $('#goToTop').fadeIn();
+      }
+      else {
+        $('#goToTop').fadeOut();
+      }
+    });
+  });
+  </script>
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default" data-spy="affix" data-offset-top="425">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#sectionTransition">Cours</a></li>
+          <li><a href="#sectionRendu">Rendu</a></li>
+          <li><a href="#sectionContact">Contact</a></li>
+          <li><a href="#sectionCover"><img src="src/goToTop.png" alt="goToTop" id="goToTop"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- SECTION COVER -->
+  <section id="sectionCover">
+    <div class="img">
+      <h1>Site Immersif</h1>
+      <h3>Promo 2020 - A2</h3>
+      <h5>Option Web et e-business</h5>
+      <a href="#sectionTransition" class="btn start">Commencer <br> le cours</a>
+    </div>
+  </section>
+  <!-- SECTION TRANSITION -->
+  <section id="sectionTransition">
+    <h2>Transition</h2>
+    <br>
+    <p>Créer un effet de <strong>transition</strong> entre plusieurs états d’un même élément.</p>
+    <div class="row">
+      <p class="box col-xs-5 col-md-offset-3">
+        .element {<br>
+          <span class="indent">transition-property : [propriété]; <br></span>
+          <span class="indent">transition-duration : [durée];<br></span>
+          <span class="indent">transition-timing-function : [effet];<br></span>
+          <span class="indent">transition-delay : [retard];<br></span>
+        }<br>
+      </p>
+    </div>
+  </section>
+  <!-- SECTION KEY -->
+  <section id="sectionKey">
+    <h2>Keyframe & Animation</h2>
+    <br>
+    <p>Créer une réelle animation sur un élément uniquement en CSS.</p>
+    <p>Ces 2 propriétés CSS ne peuvent pas s’utiliser <strong>l’une sans l’autre</strong>.</p>
+    <div class="row">
+      <p class="box col-xs-6 col-md-offset-1">
+        @keyframes monAnimation { <br>
+          <span class="indent">0%, 100% {<br></span>
+            <span class="indent"><span class="indent">background-color:<br></span></span>
+            <span class="indent"><span class="indent">grey;<br></span></span>
+            <span class="indent">}<br></span>
+            <span class="indent">50% {<br></span>
+              <span class="indent"><span class="indent">background-color:<br></span></span>
+              <span class="indent"><span class="indent">orange;<br></span></span>
+              <span class="indent">}<br></span>
+            } <br>
+          </p>
+          <p class="box col-xs-6 col-md-offset-1">
+            .element { <br>
+              <span class="indent">animation-name: [nomDuKeyframe];<br></span>
+              <span class="indent">animation-duration: [durée];<br></span>
+              <span class="indent">animation-timing-function: [effet];<br></span>
+              <span class="indent">animation-delay: [retard];<br></span>
+              <span class="indent">animation-iteration-count: [iteration];<br></span>
+              <span class="indent">animation-direction: [direction];<br></span>
+              <span class="indent">animation-fill-mode: [spécificitéFin];<br></span>
+              <span class="indent">animation-play-state: [état];<br></span>
+            }<br>
+          </p>
+        </div>
+      </section>
+      <!-- SECTION SVG -->
+      <section id="sectionSVG">
+        <h2>SVG</h2>
+        <br>
+        <p>Un fichier SVG est un fichier image dont les éléments qui le composent peuvent s’animer.</p>
+        <p>Un fichier SVG n’est pas dégradé même quand il est zoomé.</p>
+        <div class="row">
+          <p class="box col-xs-6 col-md-offset-1">
+            &lt;svg version="2" xmlns="http://www.w3.org/2000/svg" width="500" height="500"&gt<br/>
+            <span class="indent">&lt;rect width="100" height="50" fill="black" x="90" y="110" rx="3" stroke="red" stroke-width="2" /&gt<br/></span>
+            <span class="indent">&lt;circle cx="10" cy="15" r="5" fill="white" /&gt<br/></span>
+            <span class="indent">&lt;line x1="10" y1="15" x2="25" y2="20" /&gt<br/></span>
+            <span class="indent">&lt;text x="10" y="15" font-size="12" font-family="Lato"&gt<br/></span>
+            <span class="indent"><span class="indent">Mon Texte <br></span></span>
+            <span class="indent">&lt;/text&gt<br/></span>
+            <span class="indent">&lt;g translate="translate(20,50)"&gt<br/></span>
+            <span class="indent"><span class="indent">&lt;polygon points="50,180 100,100 150,180" /&gt<br/></span></span>
+            <span class="indent">&lt;/g&gt<br/></span>
+            &lt;/svg&gt<br/>
+          </p>
+        </div>
+      </section>
+      <!-- SECTION RENDU -->
+      <section id="sectionRendu" class="row" >
+        <div class="content col-xs-6">
+          <h2>Rendu</h2>
+          <br>
+          <p>Intégrer cette  maquette
+            <li>HTML / CSS propres & commentés</li>
+            <li>Animations CSS</li>
+            <li>Picto SVG</li>
+            <li>JS facultatif</li>
+            <br>
+            <br>
+            <p>Zip à envoyer avant <strong><u>le vendredi 14 avril 23h59</u></strong> à</p>
+            <li><strong><u>luk.attali@gmail.com</u></strong></li>
+            <br>
+            <br>
+            <p>Nomenclature du zip et de l’objet du mail :</p>
+            <li>[IIM - A2 - SI] Prenom_Nom.zip</li>
+          </p>
+        </div>
+        <div class="col-xs-6">
+          <svg  version="2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="250"
+          height="300">
+          <rect width="150" height="75" fill="#1ba1e2"/>
+          <polygon points="150 0, 225 37, 150 75" style="fill:#1ba1e2"/>
+          <rect x=37 y=100 width="76" height="150" fill="#ff0097"/>
+          <circle cx="75" cy="250" r="38" fill="#ff0097" />
+        </svg>
+      </div>
+    </section>
+    <!-- SECTION CONTACT -->
+    <section id="sectionContact" class="row">
+      <h2>Contact</h2>
+      <br>
+      <form class="form form-horizontal" action="">
+        <div class="form-field form-group col-xs-3">
+          <input id="number" type="text" class="form-input form-control">
+          <label for="number" class="form-label control-label">Nom*</label>
+        </div>
+        <div class="form-field form-group col-xs-3">
+          <input id="number" type="text" class="form-input form-control">
+          <label for="number" class="form-label control-label">Prénom*</label>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="form-field form-group col-xs-6">
+          <input id="number" type="text" class="form-input form-control">
+          <label for="number" class="form-label control-label">Email*</label>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="form-field form-group col-xs-6">
+          <textarea class="form-control form-input" rows="4" name="message"></textarea>
+          <label for="number" class="form-label control-label">Message*</label>
+        </div>
+        <div class="col-xs-2 col-xs-offset-6">
+          <a href="#" class="btn send">Envoyer</a>
+        </div>
+      </form>
+    </section>
+    <!-- FOOTER -->
+    <div class="footer row">
+      <div class="col-xs-2">
+        <div class="onoffswitch2">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox2" id="myonoffswitch2" checked>
+          <label class="onoffswitch-label2" for="myonoffswitch2">
+            <span class="onoffswitch-inner2"></span>
+            <span class="onoffswitch-switch2"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-xs-2 col-xs-offset-3">
+        <p>2017@Aylay</p>
+      </div>
+      <div class="col-xs-2 col-xs-offset-3">
+        <img src="src/iim.svg" alt="iim logo" style="width:4vw; height=4vh;">
+      </div>
+    </div>
+  </body>
+  </html>

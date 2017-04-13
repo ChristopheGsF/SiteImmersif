@@ -1,0 +1,226 @@
+/* line 5, style.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Lato', sans-serif;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, style.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, style.scss */
+body {
+  line-height: 1; }
+
+/* line 34, style.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, style.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, style.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 55, style.scss */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+/* line 59, style.scss */
+.form-group {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+/* line 64, style.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background: none;
+  text-decoration: underline; }
+
+/* line 69, style.scss */
+nav {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) !important;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) !important;
+  margin-bottom: 0 !important; }
+  /* line 72, style.scss */
+  nav a {
+    float: left;
+    position: relative;
+    display: block; }
+
+/* line 79, style.scss */
+#goToTop {
+  display: none; }
+
+/* line 82, style.scss */
+.affix {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10; }
+
+/* line 89, style.scss */
+.box {
+  color: white;
+  border: 1px solid #333333;
+  background: #333333;
+  width: auto;
+  height: auto;
+  margin-top: 10vh;
+  padding: 2vh 4vw;
+  font-size: 1.3em; }
+  /* line 98, style.scss */
+  .box .indent {
+    padding-left: 2vw; }
+
+/* line 103, style.scss */
+h2 {
+  font-size: 3em;
+  font-weight: bold; }
+
+/* line 107, style.scss */
+p {
+  font-size: 1.5em;
+  font-weight: 100; }
+
+/* line 117, style.scss */
+#sectionCover {
+  margin-top: -10vh;
+  top: 0;
+  left: 0;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/typewriter.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/typewriter.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: top left;
+  text-align: center;
+  padding-top: 15vh;
+  color: black; }
+  /* line 128, style.scss */
+  #sectionCover h1 {
+    font-size: 6em;
+    font-weight: bold; }
+  /* line 132, style.scss */
+  #sectionCover h3 {
+    margin-top: 3vh;
+    font-size: 3rem; }
+  /* line 136, style.scss */
+  #sectionCover h5 {
+    font-size: 2.5em;
+    font-weight: 100; }
+  /* line 140, style.scss */
+  #sectionCover .btn {
+    height: 14vh;
+    color: black;
+    margin: 5vh 0 10vh 0;
+    padding: 1vh 5vw;
+    font-size: 2em;
+    line-height: 1.2;
+    border: 1px solid #1ba1e2;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    -webkit-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out; }
+
+/* line 156, style.scss */
+#sectionTransition {
+  background: #1ba1e2;
+  color: white;
+  padding: 6vh 0 9vh 10vw;
+  height: auto;
+  width: auto; }
+
+/* line 164, style.scss */
+#sectionKey {
+  padding: 6vh 0 9vh 10vw; }
+
+/* line 168, style.scss */
+#sectionSVG {
+  background: #1ba1e2;
+  color: white;
+  padding: 6vh 0 9vh 10vw; }
+
+/* line 174, style.scss */
+#sectionRendu {
+  padding: 6vh 0 9vh 10vw;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/rendu.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/rendu.png");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  background-position: top left;
+  line-height: 1.5;
+  width: auto;
+  height: auto; }
+  /* line 183, style.scss */
+  #sectionRendu li {
+    font-size: 1.3em;
+    font-weight: 100;
+    margin-left: 2vw; }
+  /* line 188, style.scss */
+  #sectionRendu .content {
+    float: left; }
+  /* line 191, style.scss */
+  #sectionRendu .object {
+    margin-left: 15%; }
+
+/* line 196, style.scss */
+#sectionContact {
+  padding: 6vh 0 9vh 10vw;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/contact.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../src/contact.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: top left;
+  line-height: 1.5;
+  width: auto;
+  height: auto; }
+  /* line 205, style.scss */
+  #sectionContact .btn {
+    color: black;
+    margin: 5vh 0 10vh 0;
+    padding: 1vh 5vw;
+    font-size: 2em;
+    line-height: 1.0;
+    border: 1px solid #ff0097;
+    border-radius: 0; }
+
+/* line 216, style.scss */
+.footer {
+  width: auto;
+  height: auto;
+  background: #333333;
+  color: white;
+  text-align: center; }
+  /* line 222, style.scss */
+  .footer p {
+    margin-top: 2.5vh;
+    font-size: 1.2em; }
